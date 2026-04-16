@@ -1,0 +1,51 @@
+/* 기본 초기화 */
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #ffffff;
+    font-family: "Helvetica", sans-serif; /* 미니멀한 폰트 권장 */
+}
+
+/* 그리드 레이아웃 설정 */
+.portfolio-grid {
+    display: grid;
+    /* 화면 너비에 따라 자동으로 열 개수 조절 (최소 150px) */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 40px 20px; /* 행 간격 40px, 열 간격 20px */
+    align-items: end; /* 이미지가 하단 정렬되도록 설정 */
+}
+
+/* 개별 아이템 스타일 */
+.portfolio-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* 하단 텍스트(메타데이터) 스타일 */
+.metadata {
+    font-size: 11px;
+    line-height: 1.2;
+    color: #666;
+    text-transform: uppercase; /* 대문자 변환 */
+}
+
+.metadata p {
+    margin: 0;
+}
+
+.metadata .title {
+    color: #000;
+    font-weight: bold;
+}
